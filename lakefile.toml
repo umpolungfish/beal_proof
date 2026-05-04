@@ -1,0 +1,10 @@
+name = "BealProof"
+version = "0.1.0"
+defaultTargets = ["bealproof"]
+
+[[lean_lib]]
+name = "BealProof"
+
+[[lean_exe]]
+name = "bealproof"
+root = "Main"
