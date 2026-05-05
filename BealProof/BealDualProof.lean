@@ -65,8 +65,7 @@ theorem reduction_to_prime_exponents :
       A ^ p + B ^ q = C ^ r →
       Nat.gcd (Nat.gcd A B) C > 1)
     → beal_conjecture := by
-  intro _h
-  intro _A _B _C _x _y _z _hA _hB _hC hx hy hz _heq
+  intro _h _A _B _C _x _y _z _hA _hB _hC hx hy hz _heq
   have hx3 : _x ≥ 3 := Nat.succ_le_of_lt hx
   have hy3 : _y ≥ 3 := Nat.succ_le_of_lt hy
   have hz3 : _z ≥ 3 := Nat.succ_le_of_lt hz
