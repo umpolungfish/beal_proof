@@ -1,0 +1,16 @@
+BealDualProof.lean: sync from MillenniumAnkh (2026-05-28)
+==========================================================
+
+Replaced with current MillenniumAnkh/Millennium/Beal.lean.
+
+Key additions over previous version:
+- Namespace: Millennium.Beal
+- beal_equal_prime_exponents: NOW PROVED (was open)
+  Proof: by_contra on coprimality, prime factorization argument,
+  then ribet_level_lowering closes the equal-exponent FLT case
+- Structural meet verification via decide (not native_decide)
+- Pythagorean witness via decide (not native_decide)
+- reduction_to_prime_exponents: reformulation proved
+- 12-primitive type system: all inductive types unchanged
+- axiom beal_prime_mixed_exponents: still open (Omega_0 → Omega_Z2 gap)
+- axiom ribet_level_lowering: still axiomatized (FLT/modularity)
