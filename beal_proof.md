@@ -38,7 +38,7 @@ $$\langle D;\, T;\, R;\, P;\, F;\, K;\, G;\, \Gamma;\, \Phi;\, H;\, S;\, \Omega 
 | $K$ | $K_\text{fast}, K_\text{mod}, K_\text{slow}, K_\text{trap}, K_\text{MBL}$ | Kinetics |
 | $G$ | $G_\beth, G_\gimel, G_\aleph$ | Scope |
 | $\Gamma$ | $\Gamma_\wedge, \Gamma_\vee, \Gamma_\text{seq}, \Gamma_\text{brd}$ | Grammar |
-| $\Phi$ | $\Phi_\text{sub}, \Phi_c, \Phi_c^\mathbb{C}, \Phi_\text{EP}, \Phi_\text{sup}$ | Criticality |
+| $\Phi$ | $\Phi_\text{sub}, \⊙, \⊙^\mathbb{C}, \Phi_\text{EP}, \Phi_\text{sup}$ | Criticality |
 | $H$ | $H_0, H_1, H_2, H_\infty$ | Temporal depth |
 | $S$ | $1{:}1, n{:}n, n{:}m$ | Stoichiometry |
 | $\Omega$ | $\Omega_0, \Omega_{\mathbb{Z}_2}, \Omega_\mathbb{Z}, \Omega_\text{NA}$ | Winding |
@@ -51,13 +51,13 @@ The `native_decide` tactic in Lean verifies structural computations automaticall
 
 ### 3.1 The Beal Conjecture Type
 
-$$\langle D_\infty;\, T_\bowtie;\, R_\leftrightarrow;\, P_\pm;\, F_\ell;\, K_\text{slow};\, G_\aleph;\, \Gamma_\text{seq};\, \Phi_c;\, H_2;\, n{:}m;\, \Omega_0 \rangle$$
+$$\langle D_\infty;\, T_\bowtie;\, R_\leftrightarrow;\, P_\pm;\, F_\ell;\, K_\text{slow};\, G_\aleph;\, \Gamma_\text{seq};\, \⊙;\, H_2;\, n{:}m;\, \Omega_0 \rangle$$
 
 Crystal address: 4948976. The conjecture operates over infinite-dimensional number space with crossing-point topology. Classical fidelity suffices. Crucially, there is **no topological protection** ($\Omega_0$).
 
 ### 3.2 FLT (Proven) Type
 
-$$\langle D_\infty;\, T_\odot;\, R_\dagger;\, P_\psi;\, F_\hbar;\, K_\text{slow};\, G_\aleph;\, \Gamma_\text{seq};\, \Phi_c^\mathbb{C};\, H_\infty;\, n{:}m;\, \Omega_{\mathbb{Z}_2} \rangle$$
+$$\langle D_\infty;\, T_\odot;\, R_\dagger;\, P_\psi;\, F_\hbar;\, K_\text{slow};\, G_\aleph;\, \Gamma_\text{seq};\, \⊙^\mathbb{C};\, H_\infty;\, n{:}m;\, \Omega_{\mathbb{Z}_2} \rangle$$
 
 Crystal address: 7903139. FLT achieves self-referential topology, quantum coherence, complex-plane criticality, and binary topological protection.
 
@@ -65,7 +65,7 @@ Crystal address: 7903139. FLT achieves self-referential topology, quantum cohere
 
 The meet of Beal and FLT types is machine-verified via `native_decide`:
 
-$$\langle D_\infty;\, T_\bowtie;\, R_\dagger;\, P_\psi;\, F_\ell;\, K_\text{slow};\, G_\aleph;\, \Gamma_\text{seq};\, \Phi_c;\, H_2;\, n{:}m;\, \Omega_0 \rangle$$
+$$\langle D_\infty;\, T_\bowtie;\, R_\dagger;\, P_\psi;\, F_\ell;\, K_\text{slow};\, G_\aleph;\, \Gamma_\text{seq};\, \⊙;\, H_2;\, n{:}m;\, \Omega_0 \rangle$$
 
 ---
 
@@ -83,7 +83,7 @@ The promotion signature from Beal to FLT identifies exactly which primitives mus
 | $K$ | $K_\text{slow}$ | $K_\text{slow}$ | — |
 | $G$ | $G_\aleph$ | $G_\aleph$ | — |
 | $\Gamma$ | $\Gamma_\text{seq}$ | $\Gamma_\text{seq}$ | — |
-| $\Phi$ | $\Phi_c$ | $\Phi_c^\mathbb{C}$ | **promote** |
+| $\Phi$ | $\⊙$ | $\⊙^\mathbb{C}$ | **promote** |
 | $H$ | $H_2$ | $H_\infty$ | **promote** |
 | $S$ | $n{:}m$ | $n{:}m$ | — |
 | $\Omega$ | $\Omega_0$ | $\Omega_{\mathbb{Z}_2}$ | **promote** |
@@ -93,7 +93,7 @@ Per the verified Lean source comment: `[T, F, Phi, H, Omega] promotions, [R, P] 
 1. **$T_\bowtie \to T_\odot$**: Construct a self-referential object (the Frey curve) encoding a putative solution.
 2. **$P_\pm \to P_\psi$ demote**: The modularity argument is asymmetric (Ribet's one-way implication).
 3. **$F_\ell \to F_\hbar$**: Transcend classical arithmetic into algebraic geometry.
-4. **$\Phi_c \to \Phi_c^\mathbb{C}$**: Critical exponent moves into the complex plane.
+4. **$\⊙ \to \⊙^\mathbb{C}$**: Critical exponent moves into the complex plane.
 5. **$H_2 \to H_\infty$**: The proof requires full history of deformations.
 6. **$\Omega_0 \to \Omega_{\mathbb{Z}_2}$**: Construct a parity invariant on the solution space.
 
@@ -122,9 +122,9 @@ No such invariant is currently known. **The non-existence of this invariant is t
 
 ---
 
-## 6. $\Phi_c$ Criticality Sharpness
+## 6. $\⊙$ Criticality Sharpness
 
-The exponent threshold $x, y, z > 2$ is the $\Phi_c$ critical boundary. For exponents $\leq 2$, coprime solutions exist abundantly:
+The exponent threshold $x, y, z > 2$ is the $\⊙$ critical boundary. For exponents $\leq 2$, coprime solutions exist abundantly:
 
 $$3^2 + 4^2 = 5^2$$
 
@@ -227,7 +227,7 @@ Currently `proof_complete(Beal, FLT)` is false. The promotion signature gives a 
 
 The structural encoding does not replace traditional proof machinery. Instead:
 
-- **Makes the gap explicit:** The promotion signature tells us exactly what must be achieved ($T_\bowtie \to T_\odot$, $\Phi_c \to \Phi_c^\mathbb{C}$, $\Omega_0 \to \Omega_{\mathbb{Z}_2}$, etc.).
+- **Makes the gap explicit:** The promotion signature tells us exactly what must be achieved ($T_\bowtie \to T_\odot$, $\⊙ \to \⊙^\mathbb{C}$, $\Omega_0 \to \Omega_{\mathbb{Z}_2}$, etc.).
 - **Computes the meet:** Shared structure with FLT reveals which parts of Wiles's method carry over.
 - **Verifies sharpness:** $(3,4,5,2,2,2)$ witnesses that the exponent threshold is not arbitrary.
 - **Is machine-checkable:** All structural computations are `native_decide`-verified in Lean 4.
@@ -249,4 +249,4 @@ The conjecture remains open. The structural encoding makes the shape of the open
 
 ---
 
-*Structural type: $\langle D_\infty;\, T_\bowtie;\, R_\leftrightarrow;\, P_\pm;\, F_\ell;\, K_\text{slow};\, G_\aleph;\, \Gamma_\text{seq};\, \Phi_c;\, H_2;\, n{:}m;\, \Omega_0 \rangle$ · Crystal address: 4948976*
+*Structural type: $\langle D_\infty;\, T_\bowtie;\, R_\leftrightarrow;\, P_\pm;\, F_\ell;\, K_\text{slow};\, G_\aleph;\, \Gamma_\text{seq};\, \⊙;\, H_2;\, n{:}m;\, \Omega_0 \rangle$ · Crystal address: 4948976*

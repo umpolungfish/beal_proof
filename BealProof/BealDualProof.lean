@@ -6,13 +6,13 @@ import Mathlib
 
 Structural type:
   ⟨D_infty; T_bowtie; R_lr; P_pm; F_ell; K_slow;
-   G_aleph; Γ_seq; Φ_c; H2; n_m; Ω_0⟩
-Crystal address: 4948976  |  Ouroboricity: O_1  |  C-score: 0.498
+   G_aleph; Γ_seq; ⊙; H2; n_m; Ω_0⟩
+Crystal address: 4948976  |  Ouroboricity: O₁  |  C-score: 0.498
 
 ## What Is Verified
 - Structural meet Beal ∧ FLT = expected meet (by decide)
 - Ω_0 status of the Beal Conjecture (rfl)
-- Φ_c sharpness: Pythagorean witness for exponent ≤ 2 (by decide)
+- ⊙ sharpness: Pythagorean witness for exponent ≤ 2 (by decide)
 - beal_equal_prime_exponents: proved via ribet_level_lowering
 
 ## What Is Open
@@ -214,7 +214,7 @@ example : beal_flt_meet = expected_meet := by decide
 example : beal_structural_type.Omega =
     Primitive_Omega.Omega_0 := by rfl
 
-/-- MACHINE VERIFIED: Φ_c threshold is sharp — coprime solutions exist
+/-- MACHINE VERIFIED: ⊙ threshold is sharp — coprime solutions exist
     for exponent ≤ 2. -/
 example : ∃ (A B C x y z : Nat), A > 0 ∧ B > 0 ∧ C > 0 ∧
     (x = 2 ∨ y = 2 ∨ z = 2) ∧ A ^ x + B ^ y = C ^ z := by
