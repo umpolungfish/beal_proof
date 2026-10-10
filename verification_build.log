@@ -1,0 +1,15 @@
+ℹ [8026/8028] Replayed Main
+info: Main.lean:6:0: { D := Primitive_D.infty,
+  T := Primitive_T.bowtie,
+  R := Primitive_R.dagger,
+  P := Primitive_P.psi,
+  F := Primitive_F.ell,
+  K := Primitive_K.slow,
+  G := Primitive_G.aleph,
+  Gamma := Primitive_Gamma.seq,
+  Phi := Primitive_Phi.c,
+  H := Primitive_H.H_turntwo,
+  S := Primitive_S.S_ltailm,
+  Omega := Primitive_Omega.Omega_closeepsilon }
+info: Main.lean:7:0: 7
+Build completed successfully (16040 jobs).
