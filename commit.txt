@@ -1,3 +1,3 @@
-I clean the Beal source whitespace
+I integrate and clean the Beal proof updates
 
-I remove trailing whitespace from the preserved Beal definitions and retain the verified local build record.
+I preserve the module changes from both repository checkouts, keep the verified build record, and remove trailing whitespace.
