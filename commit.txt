@@ -1,3 +1,3 @@
-I preserve my complete Beal structural work
+I clean the Beal source whitespace
 
-I reconnect the Beal entry point to the complete structural definitions, retain the updated package manifest, and preserve the successful local build record.
+I remove trailing whitespace from the preserved Beal definitions and retain the verified local build record.

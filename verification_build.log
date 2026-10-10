@@ -1,4 +1,5 @@
-ℹ [8026/8028] Replayed Main
+✔ [16036/16040] Built BealProof.BealDualProof (37s)
+ℹ [16037/16040] Replayed Main
 info: Main.lean:6:0: { D := Primitive_D.infty,
   T := Primitive_T.bowtie,
   R := Primitive_R.dagger,

@@ -82,7 +82,7 @@ def hyperbolic_condition (x y z : Nat) : Prop :=
     The boundary case (3,3,3) gives 1/3+1/3+1/3=1 — exactly parabolic,
     where the modular argument fails. This is the ⊙ critical point:
     the phase boundary between solubility and insolubility.
-    
+
     For all other triples with x,y,z > 2, the hyperbolic condition holds. -/
 axiom exponent_gt_two_implies_hyperbolic (x y z : Nat) (hx : x > 2) (hy : y > 2) (hz : z > 2) :
     hyperbolic_condition x y z
@@ -370,8 +370,8 @@ def omega_Z2_invariant : Prop :=
     For exponents ≤ 2, coprime solutions exist (3² + 4² = 5²).
     This is the ⊙ boundary — below it, the crossing is soft;
     above it, the modular argument can (in principle) operate. -/
-example : 
-    (∃ (A B C x y z : Nat), A > 0 ∧ B > 0 ∧ C > 0 ∧ 
+example :
+    (∃ (A B C x y z : Nat), A > 0 ∧ B > 0 ∧ C > 0 ∧
      (x = 2 ∨ y = 2 ∨ z = 2) ∧
      A ^ x + B ^ y = C ^ z) := by
   refine ⟨3, 4, 5, 2, 2, 2, by decide, by decide, by decide, ?_, ?_⟩
